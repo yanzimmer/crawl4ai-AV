@@ -872,7 +872,7 @@
 
                     if (newCodes.length > 0) {
                         // 只发送未搜索过的番号
-                        fetch('/add_task', {
+            fetch('/add_task', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -1025,8 +1025,8 @@
 
         function updateLogs() {
             fetch('/get_logs')
-                .then(response => response.json())
-                .then(data => {
+            .then(response => response.json())
+            .then(data => {
                     const logContainer = document.querySelector('#log-container .panel-content');
                     const linksContainer = document.querySelector('#links-container .panel-content');
                     const historyList = document.getElementById('history-list');
@@ -1072,10 +1072,10 @@
                                 div.className = 'magnet-link';
                                 div.textContent = link;
                                 linksContainer.appendChild(div);
-                            });
+            });
                         }
-                    }
-                    
+        }
+
                     // 更新历史文件列表
                     if (historyList && data.history_files) {
                         const newHistoryHtml = data.history_files.map(file => `

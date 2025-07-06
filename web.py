@@ -321,7 +321,7 @@ def move_files_to_history():
         for pattern in ['*.txt', '*.json']:
             for file_path in glob.glob(pattern):
                 # 跳过特殊文件
-                if file_path in [SEARCHED_COUNT_FILE, LINKS_FILE, 'settings.json']:
+                if file_path in [SEARCHED_COUNT_FILE, LINKS_FILE, 'settings.json', 'requirements.txt']:
                     continue
                     
                 # 构建目标路径
